@@ -1,0 +1,49 @@
+# EXP_NAME: 'YOUR_EXPERIMENT_NAME'
+DATASET:
+  NAME: CIFAR10N
+  REPRESENTATION_MODEL: "simclr"
+  REPRESENTATION_DIM: 512
+  ROOT_DIR: '.data'
+  VAL_RATIO: 0.0
+  AUG_METHOD: 'hflip'
+MODEL:
+  TYPE: resnet18
+  NUM_CLASSES: 10
+OPTIM:
+  TYPE: 'sgd'
+  BASE_LR: 0.025
+  LR_POLICY: cos
+  LR_MULT: 0.1
+  # STEPS: [0, 60, 120, 160, 200]
+  MAX_EPOCH: 200
+  MOMENTUM: 0.9
+  NESTEROV: True
+  WEIGHT_DECAY: 0.0003
+  GAMMA: 0.1
+TRAIN:
+  SPLIT: train
+  BATCH_SIZE: 100
+  IM_SIZE: 32
+  EVAL_PERIOD: 2
+TEST:
+  SPLIT: test
+  BATCH_SIZE: 200
+  IM_SIZE: 32
+DATA_LOADER:
+  NUM_WORKERS: 4
+CUDNN:
+  BENCHMARK: True
+ACTIVE_LEARNING:
+  INIT_L_RATIO: 0.
+#  BUDGET_SIZE: 10
+  # SAMPLING_FN: 'uncertainty'
+  MAX_ITER: 20
+  FINE_TUNE: False
+  DELTA_RESOLUTION: 0.05
+  MAX_DELTA: 1.1
+NOISE:
+  ROOT_NOISE_DIR: './cifar-10-100n/data'
+# 'worse_label': 0.4021, 'aggre_label': 0.0901, 'random_label1': 0.1723, 'random_label2': 0.1812, 'random_label3': 0.1764
+  NOISE_TYPE: 'worse_label'
+  NOISE_RATE: 0.4021
+
