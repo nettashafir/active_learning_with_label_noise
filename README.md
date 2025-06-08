@@ -32,8 +32,8 @@ deep-al/
 |    │   │       └── features.py  # Mapping for SSL embeddings for each dataset
 |    │   ├── al/                  # Active Learning strategies (query selection methods)
 |    │   └── lnl/                 # Learning with Noisy Labels (LNL) methods
-|    ├── tools/                
-|    │   └── train_al.py          # Main training + active learning loop
+|    └── tools/                
+|        └── train_al.py          # Main training + active learning loop
 └── README.md                     # This file
 ```
 
