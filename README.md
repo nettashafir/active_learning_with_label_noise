@@ -20,20 +20,21 @@ This project presents **Noise-Aware Active Sampling (NAS)** — a novel meta-alg
   </p>
 </center>
 
-## Repository Structure
+## Repository Structure (partial)
 
 ```
 .
-├── configs/                 # YAML config files for different experiments
-├── pycls/                 
-│   ├── datasets/
-│   │   └── utils/
-│   │       └── features.py  # Mapping for SSL embeddings for each dataset
-│   ├── al/                  # Active Learning strategies (query selection methods)
-│   └── lnl/                 # Learning with Noisy Labels (LNL) methods
-├── tools/                
-│   └── train_al.py          # Main training + active learning loop
-└── README.md                # This file
+deep-al/
+|    ├── configs/                 # YAML config files for different experiments
+|    ├── pycls/                 
+|    │   ├── datasets/            # Includes classes for all the datasets supported in this repo.
+|    │   │   └── utils/
+|    │   │       └── features.py  # Mapping for SSL embeddings for each dataset
+|    │   ├── al/                  # Active Learning strategies (query selection methods)
+|    │   └── lnl/                 # Learning with Noisy Labels (LNL) methods
+|    ├── tools/                
+|    │   └── train_al.py          # Main training + active learning loop
+└── README.md                     # This file
 ```
 
 ## Setup
