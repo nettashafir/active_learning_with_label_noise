@@ -84,17 +84,18 @@ python train_al.py --cfg ../configs/cifar100/al/RESNET18.yaml \
                    --lnl aum
 ```
 
-Another example: Run **MaxHerding+NAS** query selection strategy with **CrossValidation** noise filter on Clothing1M (real-world noisy dataset with ~38% noise), using linear probing over SSL features:
+Note that by default, the noise filtering algorithm given in `--lnl` is used both in the internal mechanism of NAS (if used) and to filter noisy samples before training.
+Another example: Run **MaxHerding+NAS** query selection strategy with **CrossValidation** noise filter on Clothing1M (real-world noisy dataset with ~38% noise), using linear probing over SSL features, while the model is trained on all labeled samples, not just those predicted to be clean:
 
 ```bash
 cd deep-al/tools
 python train_al.py --cfg ../configs/clothing1m/al/RESNET18.yaml \
                    --al maxherding_nas \
-                   --initial_delta 0.3 \
                    --initial_size 0 \
                    --samples_per_class 1 2 3 4 5 \
                    --lnl cv \
-                   --use_linear_model
+                   --use_linear_model \
+                   --train_on_all_labeled_data
 ```
 
 You can control most settings either via the config files or by passing them as arguments to `train_al.py`.
