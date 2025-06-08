@@ -69,7 +69,7 @@ python train_al.py --cfg ../configs/cifar100/al/RESNET18.yaml \
                    --num_episodes 5 \      # number of active learning rounds
                    --noise_type sym \ 
                    --noise_rate 0.5 \
-                   --lnl aum               # noise filter algorithm
+                   --lnl aum               # noise filtering algorithm
 ```
 
 Or equivalently using `samples_per_class`:
