@@ -14,7 +14,7 @@ This project presents **Noise-Aware Active Sampling (NAS)** — a novel meta-alg
     <img src="./images/noise_aware_query_selection_framework.jpg" height="250">
   </p>
   <p>
-    <em><strong>Noise-Aware Query Selection (NAS):</strong>  
+    <em><strong>Noise-Aware Active Sampling (NAS):</strong>  
     A visual overview of our NAS framework. NAS (illustrated by the dashed orange line) takes as input a query selection strategy 𝒮 and a noise-filtering algorithm 𝒜. It alternates between selecting 𝑏 samples using 𝒮, sending them for annotation, and filtering noisy samples with 𝒜 before proceeding to the next round.
     </em>
   </p>
