@@ -62,14 +62,14 @@ Run **NPC (ProbCover+NAS)** query selection strategy with **LowBudgetAUM** noise
 ```bash
 cd deep-al/tools
 python train_al.py --cfg ../configs/cifar100/al/RESNET18.yaml \
-                   --al npc \
-                   --initial_delta 0.65 \
-                   --initial_size 0 \
-                   --budget 10 \
-                   --num_episodes 5 \
-                   --noise_type sym \
+                   --al npc \              # query selection algorithm
+                   --initial_delta 0.65 \  # ProbCover's delta hyperparameter
+                   --initial_size 0 \      # Initial randomly selected labeled set
+                   --budget 100 \          # budget for each round
+                   --num_episodes 5 \      # number of active learning rounds
+                   --noise_type sym \ 
                    --noise_rate 0.5 \
-                   --lnl aum
+                   --lnl aum               # noise filter algorithm, for both NAS inner mechanism and before training
 ```
 
 Or equivalently using `samples_per_class`:
