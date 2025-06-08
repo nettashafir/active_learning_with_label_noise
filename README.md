@@ -84,7 +84,7 @@ python train_al.py --cfg ../configs/cifar100/al/RESNET18.yaml \
                    --lnl aum
 ```
 
-Another example: Run **MaxHerding+NAS** query selection strategy with **CrossValidation** noise filter on **Clothing1M** (real-world noisy dataset with ~38% noise), using linear probing over SSL features:
+Another example: Run **MaxHerding+NAS** query selection strategy with **CrossValidation** noise filter on Clothing1M (real-world noisy dataset with ~38% noise), using linear probing over SSL features:
 
 ```bash
 cd deep-al/tools
