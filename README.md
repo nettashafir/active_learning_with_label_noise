@@ -57,7 +57,7 @@ To train SSL features, you can use popular libraries such as [SCAN](https://gith
 
 ## Usage
 
-Run NAS with **NPC** and **LowBudgetAUM** noise filter on CIFAR100 with 50% symmetric noise, using a ResNet18:
+Run **NPC (ProbCover+NAS)** query selection strategy with **LowBudgetAUM** noise filter on CIFAR100 with 50% symmetric noise, using a ResNet18:
 
 ```bash
 cd deep-al/tools
@@ -84,7 +84,7 @@ python train_al.py --cfg ../configs/cifar100/al/RESNET18.yaml \
                    --lnl aum
 ```
 
-Another example: Run **MaxHerding+NAS** with **CrossValidation** noise filter on **Clothing1M** (real-world noisy dataset with ~38% noise), using linear probing over SSL features:
+Another example: Run **MaxHerding+NAS** query selection strategy with **CrossValidation** noise filter on **Clothing1M** (real-world noisy dataset with ~38% noise), using linear probing over SSL features:
 
 ```bash
 cd deep-al/tools
