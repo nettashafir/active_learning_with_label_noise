@@ -11,7 +11,7 @@ This project presents **Noise-Aware Active Sampling (NAS)** — a novel meta-alg
 
 <center>
   <p>
-    <img src="./images/noise_aware_query_selection_framework.jpg" height="250">
+    <img src="./images/noise_aware_query_selection_framework.jpg">
   </p>
   <p>
     <em><strong>Noise-Aware Active Sampling (NAS):</strong>  
